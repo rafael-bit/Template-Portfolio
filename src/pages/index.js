@@ -1,12 +1,7 @@
 export default function Home() {
   return (
-    <main className=" min-h-screen">
-      <div class="bg-white dark:bg-gray-800">
-        <h1 class="text-gray-900 dark:text-white">Dark mode</h1>
-        <p class="text-gray-600 dark:text-gray-300">
-          Lorem ipsum...
-        </p>
-      </div>
+    <main className="backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-white supports-backdrop-blur:bg-white/95 dark:bg-gray-800/75 h-100">
+      
     </main>
   );
 }

@@ -6,13 +6,20 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+	const links = [
+    { href: '/Home', text: 'Home' },
+    { href: '/Portfolio', text: 'Portfolio' },
+    { href: '/About', text: 'About' },
+    { href: '/Blog', text: 'Blog' },
+  ];
+
   return (
-    <header className="bg-white bg-opacity-25 dark:bg-gray-800">
+     <header className="bg-white dark:bg-gray-800">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Portfolio</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Logo" />
+            <img className="h-8 w-auto" src={'https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'} width={10} height={10} alt="Logo" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -26,34 +33,23 @@ export default function Header() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
-            Home
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
-            Portfolio
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
-						About
-					</a>
-					<a href="#" className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
-						Blog
-          </a>
+          {links.map((link, index) => (
+            <a key={index} href={link.href} className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
+              {link.text}
+            </a>
+          ))}
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center">
-					<Button />
+          <Button />
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Portfolio</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
+              <img className="h-8 w-auto" src={'https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'} width={10} height={10} alt="Logo" />
             </a>
             <button
               type="button"
@@ -67,38 +63,20 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="/Home"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700"
-                >
-                  Home
-                </a>
-                <a
-                  href="/Portfolio"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700"
-                >
-                  Portfolio
-                </a>
-                <a
-                  href="/About"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700"
-                >
-                  About
-								</a>
-								<a
-                  href="/Blog"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700"
-                >
-                  Blog
-                </a>
-              </div>
-							<div className="flex items-center py-6">
-								<Button/>
+                {links.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    {link.text}
+                  </a>
+                ))}
               </div>
             </div>
-					</div>
+          </div>
         </Dialog.Panel>
-			</Dialog>
+      </Dialog>
 			<hr />
     </header>
   )
