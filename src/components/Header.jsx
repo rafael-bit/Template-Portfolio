@@ -7,7 +7,7 @@ export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	const links = [
-    { href: '/Home', text: 'Home' },
+    { href: '/', text: 'Home' },
     { href: '/Portfolio', text: 'Portfolio' },
     { href: '/About', text: 'About' },
     { href: '/Blog', text: 'Blog' },
@@ -72,12 +72,13 @@ export default function Header() {
                     {link.text}
                   </a>
                 ))}
+                <Button />
               </div>
             </div>
           </div>
         </Dialog.Panel>
       </Dialog>
-			<hr />
+			<hr class="border-gray-200 dark:border-gray-700" />
     </header>
   )
 }
