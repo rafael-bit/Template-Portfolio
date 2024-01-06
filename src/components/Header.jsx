@@ -14,7 +14,7 @@ export default function Header() {
   ];
 
   return (
-     <header className="bg-white dark:bg-gray-800">
+     <header className="bg-white dark:bg-gray-800 backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-white supports-backdrop-blur:bg-white/95 dark:bg-gray-800/75">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
@@ -78,7 +78,7 @@ export default function Header() {
           </div>
         </Dialog.Panel>
       </Dialog>
-			<hr class="border-gray-200 dark:border-gray-700" />
+			<hr className="border-gray-200 dark:border-gray-700" />
     </header>
   )
 }
