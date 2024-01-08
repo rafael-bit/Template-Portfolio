@@ -8,7 +8,7 @@ export default function Header() {
 
 	const links = [
     { href: '/', text: 'Home' },
-    { href: '/About', text: 'About' },
+    { href: '#skills', text: 'Skills' },
     { href: '/Portfolio', text: 'Portfolio' },
     { href: '/Blog', text: 'Blog' },
   ];

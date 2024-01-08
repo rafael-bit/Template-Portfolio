@@ -3,10 +3,17 @@ import Image from "next/image";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { useState } from 'react';
 
 export default function Home() {
+  const [currentDescription, setCurrentDescription] = useState('');
+
+  const showDescription = (description) => {
+    setCurrentDescription(description);
+  };
+
   return (
-    <main className="backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-white supports-backdrop-blur:bg-white/95 dark:bg-gray-800/75 h-100">
+    <main className="mt-3 backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-white supports-backdrop-blur:bg-white/95 dark:bg-gray-800/75 h-100">
       <Head>
         <title>Portfolio</title>
       </Head>
@@ -47,7 +54,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 dark:bg-gray-900">
+      <section id="skills" className="bg-gray-50 dark:bg-gray-900">
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-8 lg:px-8">
           <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
             <div className="text-center mx-auto max-w-lg lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
@@ -60,10 +67,10 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
               <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                 href="/accountant"
               >
-                <span className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
+                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -83,7 +90,7 @@ export default function Home() {
                     ></path>
                   </svg>
                 </span>
-                <h2 className="mt-2 font-bold">HTML5</h2>
+                <h2 className="sm:mt-2 font-bold">HTML5</h2>
 
                 <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
                   Lorem ipsum dolor sit amet consectetur.
@@ -91,10 +98,10 @@ export default function Home() {
               </a>
 
               <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                 href="/accountant"
               >
-                <span className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
+                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -115,7 +122,7 @@ export default function Home() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 font-bold">CSS3</h2>
+                <h2 className="sm:mt-2 font-bold">CSS3</h2>
 
                 <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
                   Lorem ipsum dolor sit amet consectetur.
@@ -123,10 +130,10 @@ export default function Home() {
               </a>
 
               <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                 href="/accountant"
               >
-                <span className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
+                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -147,7 +154,7 @@ export default function Home() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 font-bold">Accountant</h2>
+                <h2 className="sm:mt-2 font-bold">JavaScript</h2>
 
                 <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
                   Lorem ipsum dolor sit amet consectetur.
@@ -155,10 +162,10 @@ export default function Home() {
               </a>
 
               <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                 href="/accountant"
               >
-                <span className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
+                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -179,7 +186,7 @@ export default function Home() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 font-bold">Accountant</h2>
+                <h2 className="sm:mt-2 font-bold">React.js</h2>
 
                 <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
                   Lorem ipsum dolor sit amet consectetur.
@@ -187,10 +194,10 @@ export default function Home() {
               </a>
 
               <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                 href="/accountant"
               >
-                <span className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
+                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -211,7 +218,7 @@ export default function Home() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 font-bold">Accountant</h2>
+                <h2 className="sm:mt-2 font-bold">Node.js</h2>
 
                 <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
                   Lorem ipsum dolor sit amet consectetur.
@@ -219,10 +226,10 @@ export default function Home() {
               </a>
 
               <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                 href="/accountant"
               >
-                <span className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
+                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -243,12 +250,56 @@ export default function Home() {
                   </svg>
                 </span>
 
-                <h2 className="mt-2 font-bold">Accountant</h2>
+                <h2 className="sm:mt-2 font-bold">My SQL</h2>
 
                 <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
                   Lorem ipsum dolor sit amet consectetur.
                 </p>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="descriptionArea" className="description-area">
+          <p>{currentDescription}</p>
+        </div>
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-8 lg:px-8">
+          <div className="flex h- w-16 flex-col justify-between border-r">
+            <div>
+              <div className="border-gray-100">
+                <div className="px-1">
+                  <ul className="space-y-8 border-gray-100 pt-4 ">
+                    <li>
+                      <a
+                        href=""
+                        className="group relative flex justify-center rounded px-2 py-4 text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-700"
+                        onClick={() => showDescription('Descrição do Front-end')}
+                      >
+                        Front-end
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""
+                        className="group relative flex justify-center rounded px-2 py-4 text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700  hover:text-gray-700"
+                        onClick={() => showDescription('Descrição do Back-end')}
+                      >
+                        Back-end
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="group relative flex justify-center rounded px-2 py-4 text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-700"
+                        onClick={() => showDescription('Descrição de Todas as áreas')}
+                      >
+                        All
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
