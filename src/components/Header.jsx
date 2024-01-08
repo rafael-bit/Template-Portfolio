@@ -8,13 +8,13 @@ export default function Header() {
 
 	const links = [
     { href: '/', text: 'Home' },
-    { href: '/Portfolio', text: 'Portfolio' },
     { href: '/About', text: 'About' },
+    { href: '/Portfolio', text: 'Portfolio' },
     { href: '/Blog', text: 'Blog' },
   ];
 
   return (
-     <header className="bg-white dark:bg-gray-800 backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-white supports-backdrop-blur:bg-white/95 dark:bg-gray-800/75">
+     <header className="bg-white dark:bg-gray-800 backdrop-blur flex-none transition-colors duration-500 lg:z-50  bg-white/75 dark:bg-gray-800/75 fixed w-full z-50 top-0  ">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
