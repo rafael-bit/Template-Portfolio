@@ -5,7 +5,25 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState } from 'react';
 
+const projectsData = {
+  'Front-end': [
+    { title: 'Front-end Project 1', description: 'Description for Front-end project 1' },
+    { title: 'Front-end Project 2', description: 'Description for Front-end project 2' },
+  ],
+  'Back-end': [
+    { title: 'Back-end Project 1', description: 'Description for Back-end project 1' },
+    { title: 'Back-end Project 2', description: 'Description for Back-end project 2' },
+  ],
+  'All': [
+    { title: 'Front-end Project 1', description: 'Description for Front-end project 1' },
+    { title: 'Front-end Project 2', description: 'Description for Front-end project 2' },
+    { title: 'Back-end Project 1', description: 'Description for Back-end project 1' },
+    { title: 'Back-end Project 2', description: 'Description for Back-end project 2' },
+  ],
+};
+
 export default function Home() {
+  const [currentCategory, setCurrentCategory] = useState('Front-end');
   const [currentDescription, setCurrentDescription] = useState('');
 
   const showDescription = (description) => {
@@ -260,47 +278,41 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div id="descriptionArea" className="description-area">
-          <p>{currentDescription}</p>
-        </div>
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-8 lg:px-8">
-          <div className="flex h- w-16 flex-col justify-between border-r">
+      <section id="portfolio">
+        <div className="flex items-center max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-8 lg:px-8">
+          <div className="flex h-full w-16 flex-col justify-between border-r">
             <div>
               <div className="border-gray-100">
                 <div className="px-1">
                   <ul className="space-y-8 border-gray-100 pt-4 ">
-                    <li>
-                      <a
-                        href=""
-                        className="group relative flex justify-center rounded px-2 py-4 text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-700"
-                        onClick={() => showDescription('Descrição do Front-end')}
-                      >
-                        Front-end
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href=""
-                        className="group relative flex justify-center rounded px-2 py-4 text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700  hover:text-gray-700"
-                        onClick={() => showDescription('Descrição do Back-end')}
-                      >
-                        Back-end
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="group relative flex justify-center rounded px-2 py-4 text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-700"
-                        onClick={() => showDescription('Descrição de Todas as áreas')}
-                      >
-                        All
-                      </a>
-                    </li>
+                    {Object.keys(projectsData).map((category, index) => (
+                      <li key={index}>
+                        <a
+                          href="#portfolio"
+                          className={`group relative flex justify-center rounded px-2 py-4 text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-700 ${
+                            currentCategory === category ? 'bg-gray-100 dark:bg-gray-700 text-gray-700' : ''
+                          }`}
+                          onClick={() => {
+                            setCurrentCategory(category);
+                            setCurrentDescription('');
+                          }}
+                        >
+                          {category}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="w-full">
+            {projectsData[currentCategory].map((project, index) => (
+              <div key={index} className="border p-4 mb-4 rounded">
+                <h3 className="font-bold text-lg">{project.title}</h3>
+                <p>{project.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
