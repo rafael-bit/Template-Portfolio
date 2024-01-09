@@ -37,7 +37,7 @@ export default function Error(){
       Uh-oh!
     </h1>
 
-    <p class="-mb-20 mt-4 text-gray-500 dark:text-gray-400">We can't find that page.</p>
+    <p class="-mb-20 mt-4 text-gray-500 dark:text-gray-400">We can&apos;t find that page.</p>
   </div>
 </div>
 	)

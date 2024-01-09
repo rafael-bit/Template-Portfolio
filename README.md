@@ -1,40 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Template de Portfólio com Next.js e Tailwind CSS
 
-## Getting Started
+Este é um template de portfólio feito com Next.js e Tailwind CSS para exibir seus projetos e habilidades de forma dinâmica.
 
-First, run the development server:
+## Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este template foi criado usando Next.js para renderização estática e Tailwind CSS para estilos. Ele oferece uma estrutura flexível e moderna para mostrar seu trabalho e habilidades.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Seções
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+O portfólio é dividido nas seguintes seções:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Home
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+A seção inicial do site, onde você pode fornecer uma introdução pessoal, uma breve biografia ou uma saudação calorosa aos visitantes.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Skills
 
-## Learn More
+Nesta seção, você pode listar suas habilidades principais, como linguagens de programação, ferramentas, tecnologias, etc. Use ícones ou gráficos para tornar a visualização mais atraente.
 
-To learn more about Next.js, take a look at the following resources:
+### Portfolio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Aqui você pode exibir seus projetos. Cada projeto pode ter uma descrição, capturas de tela, links para repositórios ou sites, e quaisquer outras informações relevantes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Blog (em breve)
 
-## Deploy on Vercel
+Uma seção onde você poderá compartilhar insights, artigos, tutoriais ou atualizações sobre seus projetos. Esta seção está em desenvolvimento e em breve estará disponível.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Como Usar
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Faça um fork deste repositório.
+2. Clone o repositório forkado em sua máquina local.
+3. Instale as dependências com `npm install` ou `yarn install`.
+4. Personalize o conteúdo nas páginas correspondentes a cada seção.
+5. Adicione seu próprio conteúdo, projetos e informações nas páginas apropriadas.
+6. Execute o site localmente com `npm run dev` ou `yarn dev`.
+7. Faça o build do site com `npm run build` ou `yarn build`.
+8. Implante o site - você pode usar serviços como Vercel, Netlify, entre outros.
+
+## Estrutura de Arquivos
+
+- `/pages`: Páginas do site, cada arquivo corresponde a uma rota.
+- `/components`: Componentes React reutilizáveis.
+- `/styles`: Estilos adicionais ou customizações do Tailwind CSS.
+- `/public`: Arquivos estáticos, como imagens, fontes, etc.
+- `/next.config.js`: Configurações do Next.js.
+
+## Exemplo
+
+Veja uma [demo ao vivo aqui](link_para_demo).
+
+![Screenshot](screenshot.png)
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para sugerir melhorias, corrigir problemas ou adicionar novos recursos.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).

@@ -22,6 +22,40 @@ const projectsData = {
   ],
 };
 
+const skillsData = [
+  {
+    name: 'HTML5',
+    description: 'Lorem ipsum dolor sit amet consectetur.',
+    link: '/accountant'
+  },
+  {
+    name: 'CSS3',
+    description: 'Lorem ipsum dolor sit amet consectetur.',
+    link: '/accountant'
+  },
+  {
+    name: 'JavaScript',
+    description: 'Lorem ipsum dolor sit amet consectetur.',
+    link: '/accountant'
+  },
+  {
+    name: 'React.js',
+    description: 'Lorem ipsum dolor sit amet consectetur.',
+    link: '/accountant'
+  },
+  {
+    name: 'Node.js',
+    description: 'Lorem ipsum dolor sit amet consectetur.',
+    link: '/accountant'
+  },
+  {
+    name: 'My SQL',
+    description: 'Lorem ipsum dolor sit amet consectetur.',
+    link: '/accountant'
+  }
+];
+
+
 export default function Home() {
   const [currentCategory, setCurrentCategory] = useState('Front-end');
   const [currentDescription, setCurrentDescription] = useState('');
@@ -43,7 +77,7 @@ export default function Home() {
             </div>
 
             <div className="lg:py-24">
-              <h2 className="text-3xl font-bold sm:text-4xl">Hello. I'm Suzan</h2>
+              <h2 className="text-3xl font-bold sm:text-4xl">Hello. I&apos;m Suzan</h2>
 
               <p className="mt-4 text-gray-600 dark:text-gray-200">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic atque tenetur quis
@@ -84,196 +118,38 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-              <a
-                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="/accountant"
-              >
-                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    ></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-                <h2 className="sm:mt-2 font-bold">HTML5</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="/accountant"
-              >
-                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    ></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="sm:mt-2 font-bold">CSS3</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="/accountant"
-              >
-                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    ></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="sm:mt-2 font-bold">JavaScript</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="/accountant"
-              >
-                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    ></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="sm:mt-2 font-bold">React.js</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="/accountant"
-              >
-                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    ></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="sm:mt-2 font-bold">Node.js</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="/accountant"
-              >
-                <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                    ></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="sm:mt-2 font-bold">My SQL</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
+              {skillsData.map((skill, index) => (
+                <a
+                  key={index}
+                  className="flex items-center justify-center sm:block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                  href={skill.link}
+                >
+                  <span className="mr-4 inline-block rounded-lg bg-gray-100 dark:bg-gray-800  p-3">
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                      <path
+                        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                      ></path>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                      ></path>
+                    </svg>
+                  </span> 
+                  <h2 className="sm:mt-2 font-bold">{skill.name}</h2>
+                  <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600 dark:text-gray-200">
+                    {skill.description}
+                  </p>
+                </a>
+              ))}
             </div>
           </div>
         </div>
