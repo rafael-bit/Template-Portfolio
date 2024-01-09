@@ -47,7 +47,7 @@ Uma seção onde você poderá compartilhar insights, artigos, tutoriais ou atua
 
 ## Exemplo
 
-Veja uma [demo ao vivo aqui](link_para_demo).
+Veja uma [demo ao vivo aqui](https://one-template-portfolio.vercel.app/).
 
 ![Screenshot](screenshot.png)
 
